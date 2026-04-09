@@ -1,0 +1,1148 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.uniuyo.edu.ng/cetro/"
+     xml:base="http://www.uniuyo.edu.ng/cetro/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cetro="http://www.uniuyo.edu.ng/cetro#">
+    <owl:Ontology rdf:about="http://www.uniuyo.edu.ng/cetro"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#affectsRoute -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#affectsRoute">
+        <owl:inverseOf rdf:resource="http://www.uniuyo.edu.ng/cetro#hasWeatherCondition"/>
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#belongsTo">
+        <owl:inverseOf rdf:resource="http://www.uniuyo.edu.ng/cetro#hasVehicle"/>
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#endsAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#endsAt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasMode -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasMode">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasTrafficCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasTrafficCondition">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#TrafficCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasVehicle">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasWeatherCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasWeatherCondition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#occursAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#occursAt">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#providedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#providedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportationService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#startsAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#startsAt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#traversesRoute -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#traversesRoute">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#usesMode -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#usesMode">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#usesRoute -->
+
+    <owl:ObjectProperty rdf:about="http://www.uniuyo.edu.ng/cetro#usesRoute">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <rdfs:range rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#fuelUsed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#fuelUsed">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasAvgCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasAvgCost">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasAvgDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasAvgDistance">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasCost">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasDistance">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasMake -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasMake">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasModel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasModel">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasName">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasSpeed">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#hasTravelTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.uniuyo.edu.ng/cetro#hasTravelTime">
+        <rdfs:domain rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#AirMode -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#AirMode">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Bike -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#Bike">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#BikeOwner -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#BikeOwner">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Bus -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#Bus">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#BusOwner -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#BusOwner">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#BusStop -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#BusStop">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Car -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#Car">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#CarOwner -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#CarOwner">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#CheapestRoute -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#CheapestRoute">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.uniuyo.edu.ng/cetro#Route"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.uniuyo.edu.ng/cetro#hasCost"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#City -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#City">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Congested -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#Congested">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#TrafficCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#FloodedCondition -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#FloodedCondition">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#FreeFlow -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#FreeFlow">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#TrafficCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Junction -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#Junction">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#LandMode -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#LandMode">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Location -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#Location"/>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#LongestRoute -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#LongestRoute">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.uniuyo.edu.ng/cetro#Route"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.uniuyo.edu.ng/cetro#hasDistance"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#PrivateTransportService -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#PrivateTransportService">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportationService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#PublicTransportService -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#PublicTransportService">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportationService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#RailMode -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#RailMode">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#RainyWeather -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#RainyWeather">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Route -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#Route"/>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#ShortestRoute -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#ShortestRoute">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.uniuyo.edu.ng/cetro#Route"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.uniuyo.edu.ng/cetro#hasDistance"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#StableFlow -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#StableFlow">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#TrafficCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#SunnyWeather -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#SunnyWeather">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#TrafficCondition -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#TrafficCondition"/>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#TransportMode -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#TransportMode"/>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#TransportationService -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#TransportationService"/>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#User -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#User"/>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Vehicle -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#WaterMode -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#WaterMode">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#WeatherCondition -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#WindyWeather -->
+
+    <owl:Class rdf:about="http://www.uniuyo.edu.ng/cetro#WindyWeather">
+        <rdfs:subClassOf rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#AKTC -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#AKTC">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#PublicTransportService"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#AKTC_Bus_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#AKTC_Bus_1">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Bus"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#Uwem"/>
+        <cetro:fuelUsed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</cetro:fuelUsed>
+        <cetro:hasMake>Innoson</cetro:hasMake>
+        <cetro:hasModel>BRT</cetro:hasModel>
+        <cetro:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.4</cetro:hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#AKTC_Bus_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#AKTC_Bus_2">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Bus"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#Uwem"/>
+        <cetro:fuelUsed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</cetro:fuelUsed>
+        <cetro:hasMake>Innoson</cetro:hasMake>
+        <cetro:hasModel>BRT</cetro:hasModel>
+        <cetro:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34.5</cetro:hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Abuja -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Abuja">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Abuja_Metro -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Abuja_Metro">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#RailMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Air_Peace -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Air_Peace">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#AirMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Aka_Etinan_Junction -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Aka_Etinan_Junction">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Junction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Aka_Junction -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Aka_Junction">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Junction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Akwa_Ibom_Bus_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Akwa_Ibom_Bus_Services">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#LandMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Arik_Air -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Arik_Air">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#AirMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#BRT_Bus_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#BRT_Bus_1">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Bus"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#Vincent"/>
+        <cetro:fuelUsed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">47.0</cetro:fuelUsed>
+        <cetro:hasMake>Innoson</cetro:hasMake>
+        <cetro:hasModel>BRT</cetro:hasModel>
+        <cetro:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.6</cetro:hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Bolt_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Bolt_Service">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#PrivateTransportService"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Dirt_Bike_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Dirt_Bike_7">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Bike"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#Joshua"/>
+        <cetro:fuelUsed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</cetro:fuelUsed>
+        <cetro:hasMake>Suzuki</cetro:hasMake>
+        <cetro:hasModel>DB7</cetro:hasModel>
+        <cetro:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.6</cetro:hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Evening_Rush -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Evening_Rush">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Congested"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#GLE_Coupe -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#GLE_Coupe">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Car"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#Jonathan"/>
+        <cetro:usesRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Nwaniba_to_Itam_Route"/>
+        <cetro:fuelUsed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.0</cetro:fuelUsed>
+        <cetro:hasMake>Mercedes_Benz</cetro:hasMake>
+        <cetro:hasModel>GLE</cetro:hasModel>
+        <cetro:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65.7</cetro:hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#G_Shock_Bike -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#G_Shock_Bike">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Bike"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#Wisdom"/>
+        <cetro:fuelUsed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</cetro:fuelUsed>
+        <cetro:hasMake>G-Shock</cetro:hasMake>
+        <cetro:hasModel>ShockBike-6</cetro:hasModel>
+        <cetro:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</cetro:hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Heavy_Rain -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Heavy_Rain">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#RainyWeather"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+        <cetro:affectsRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza_to_Aka_Junction_Route"/>
+        <cetro:affectsRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza_to_Water_Fountain_Route"/>
+        <cetro:affectsRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Wellington_Bassey_to_Plaza_Route"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Ikot_Ekpene -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Ikot_Ekpene">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Ikot_Ekpene_Bus_Stop -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Ikot_Ekpene_Bus_Stop">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#BusStop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Itam -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Itam">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Jonathan -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Jonathan">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#CarOwner"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <cetro:hasVehicle rdf:resource="http://www.uniuyo.edu.ng/cetro#GLE_Coupe"/>
+        <cetro:usesRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Nwaniba_to_Itam_Route"/>
+        <cetro:hasName>Jonathan_Akpan</cetro:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Joshua -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Joshua">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#BikeOwner"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <cetro:hasVehicle rdf:resource="http://www.uniuyo.edu.ng/cetro#Dirt_Bike_7"/>
+        <cetro:usesRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza_to_Aka_Junction_Route"/>
+        <cetro:hasName>Joshua_Missang</cetro:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Lagos -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Lagos">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Lagos_BRT -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Lagos_BRT">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#PublicTransportService"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Lagos_Ferry_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Lagos_Ferry_Service">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#WaterMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Maitama_Bus_Stop -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Maitama_Bus_Stop">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#BusStop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Michael -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Michael">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#CarOwner"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <cetro:hasVehicle rdf:resource="http://www.uniuyo.edu.ng/cetro#Toyota_Camry"/>
+        <cetro:usesRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Wellington_Bassey_to_Plaza_Route"/>
+        <cetro:hasName>Michael_Okoh</cetro:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Morning_Rush -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Morning_Rush">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Congested"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Niger_Riverways -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Niger_Riverways">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#WaterMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Nigerian_Railway_Line -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Nigerian_Railway_Line">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#RailMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Nigerian_Railway_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Nigerian_Railway_Service">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#PublicTransportService"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Nwaniba_Bus_Stop -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Nwaniba_Bus_Stop">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#BusStop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Nwaniba_Junction -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Nwaniba_Junction">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Junction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Nwaniba_to_Itam_Route -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Nwaniba_to_Itam_Route">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#LongestRoute"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#AKTC"/>
+        <cetro:endsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Itam"/>
+        <cetro:hasWeatherCondition rdf:resource="http://www.uniuyo.edu.ng/cetro#Torrential_Rain"/>
+        <cetro:providedBy rdf:resource="http://www.uniuyo.edu.ng/cetro#AKTC"/>
+        <cetro:startsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Nwaniba_Junction"/>
+        <cetro:hasAvgCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">445.0</cetro:hasAvgCost>
+        <cetro:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</cetro:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Plaza -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Plaza">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#BusStop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Plaza_to_Aka_Etinan -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Plaza_to_Aka_Etinan">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#CheapestRoute"/>
+        <cetro:endsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Aka_Etinan_Junction"/>
+        <cetro:hasWeatherCondition rdf:resource="http://www.uniuyo.edu.ng/cetro#Sunny"/>
+        <cetro:providedBy rdf:resource="http://www.uniuyo.edu.ng/cetro#AKTC"/>
+        <cetro:startsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza"/>
+        <cetro:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">150.0</cetro:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Plaza_to_Aka_Junction_Route -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Plaza_to_Aka_Junction_Route">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#CheapestRoute"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <cetro:endsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Aka_Junction"/>
+        <cetro:hasWeatherCondition rdf:resource="http://www.uniuyo.edu.ng/cetro#Heavy_Rain"/>
+        <cetro:providedBy rdf:resource="http://www.uniuyo.edu.ng/cetro#AKTC"/>
+        <cetro:startsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza"/>
+        <cetro:hasAvgCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">125.0</cetro:hasAvgCost>
+        <cetro:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">150.0</cetro:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Plaza_to_Chicken_Republic_Route -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Plaza_to_Chicken_Republic_Route">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#ShortestRoute"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#Uber_Service"/>
+        <cetro:endsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Water_Fountain"/>
+        <cetro:hasWeatherCondition rdf:resource="http://www.uniuyo.edu.ng/cetro#Torrential_Rain"/>
+        <cetro:providedBy rdf:resource="http://www.uniuyo.edu.ng/cetro#Bolt_Service"/>
+        <cetro:startsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza"/>
+        <cetro:hasAvgCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">165.65</cetro:hasAvgCost>
+        <cetro:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</cetro:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Plaza_to_Ikot_Ekpene_Route -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Plaza_to_Ikot_Ekpene_Route">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#LongestRoute"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#AKTC"/>
+        <cetro:endsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Ikot_Ekpene"/>
+        <cetro:hasWeatherCondition rdf:resource="http://www.uniuyo.edu.ng/cetro#Windy_Condition"/>
+        <cetro:providedBy rdf:resource="http://www.uniuyo.edu.ng/cetro#AKTC"/>
+        <cetro:startsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza"/>
+        <cetro:hasAvgCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">435.0</cetro:hasAvgCost>
+        <cetro:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</cetro:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Plaza_to_Water_Fountain_Route -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Plaza_to_Water_Fountain_Route">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#ShortestRoute"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#Bolt_Service"/>
+        <cetro:endsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Water_Fountain"/>
+        <cetro:hasWeatherCondition rdf:resource="http://www.uniuyo.edu.ng/cetro#Heavy_Rain"/>
+        <cetro:providedBy rdf:resource="http://www.uniuyo.edu.ng/cetro#Uber_Service"/>
+        <cetro:startsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza"/>
+        <cetro:hasAvgCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">265.45</cetro:hasAvgCost>
+        <cetro:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</cetro:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Saturday_Free_Flow -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Saturday_Free_Flow">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#FreeFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Seasonal_Flood -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Seasonal_Flood">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#FloodedCondition"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Sunday_Stable_Flow -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Sunday_Stable_Flow">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#StableFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Sunny -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Sunny">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#SunnyWeather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Torrential_Rain -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Torrential_Rain">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#RainyWeather"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+        <cetro:affectsRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Nwaniba_to_Itam_Route"/>
+        <cetro:affectsRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza_to_Chicken_Republic_Route"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Toyota_Camry -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Toyota_Camry">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Car"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Vehicle"/>
+        <cetro:belongsTo rdf:resource="http://www.uniuyo.edu.ng/cetro#Michael"/>
+        <cetro:usesRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Wellington_Bassey_to_Plaza_Route"/>
+        <cetro:fuelUsed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">43.0</cetro:fuelUsed>
+        <cetro:hasMake>Toyota</cetro:hasMake>
+        <cetro:hasModel>Camry</cetro:hasModel>
+        <cetro:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">56.7</cetro:hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Uber_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Uber_Service">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#PrivateTransportService"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#TransportationService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Uwem -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Uwem">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#BusOwner"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <cetro:hasVehicle rdf:resource="http://www.uniuyo.edu.ng/cetro#AKTC_Bus_1"/>
+        <cetro:usesRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza_to_Ikot_Ekpene_Route"/>
+        <cetro:hasName>Uwem_Matthew</cetro:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Uyo -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Uyo">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Vincent -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Vincent">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#BusOwner"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <cetro:hasVehicle rdf:resource="http://www.uniuyo.edu.ng/cetro#BRT_Bus_1"/>
+        <cetro:usesRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza_to_Water_Fountain_Route"/>
+        <cetro:hasName>Vincent_Charles</cetro:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Water_Fountain -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Water_Fountain">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#BusStop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Wellington_Bassey_to_Plaza_Route -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Wellington_Bassey_to_Plaza_Route">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#CheapestRoute"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#Route"/>
+        <cetro:endsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza"/>
+        <cetro:hasWeatherCondition rdf:resource="http://www.uniuyo.edu.ng/cetro#Heavy_Rain"/>
+        <cetro:providedBy rdf:resource="http://www.uniuyo.edu.ng/cetro#Bolt_Service"/>
+        <cetro:startsAt rdf:resource="http://www.uniuyo.edu.ng/cetro#Water_Fountain"/>
+        <cetro:hasAvgCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">165.75</cetro:hasAvgCost>
+        <cetro:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</cetro:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Windy_Condition -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Windy_Condition">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#WeatherCondition"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#WindyWeather"/>
+        <cetro:affectsRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza_to_Ikot_Ekpene_Route"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uniuyo.edu.ng/cetro#Wisdom -->
+
+    <owl:NamedIndividual rdf:about="http://www.uniuyo.edu.ng/cetro#Wisdom">
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#BikeOwner"/>
+        <rdf:type rdf:resource="http://www.uniuyo.edu.ng/cetro#User"/>
+        <cetro:hasVehicle rdf:resource="http://www.uniuyo.edu.ng/cetro#G_Shock_Bike"/>
+        <cetro:usesRoute rdf:resource="http://www.uniuyo.edu.ng/cetro#Plaza_to_Chicken_Republic_Route"/>
+        <cetro:hasName>Wisdom_Moture</cetro:hasName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
